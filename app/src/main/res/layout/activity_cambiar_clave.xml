@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/fondo"
+    android:gravity="center"
+    android:theme="@style/Material" >
+
+    <com.sinaseyfi.advancedcardview.AdvancedCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        style="@style/cardSombra" >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/gris"
+            app:hintEnabled="false"
+            app:hintTextColor="@color/gris"
+            app:boxStrokeWidth="0dp"
+            app:boxCornerRadiusBottomEnd="25dp"
+            app:boxCornerRadiusBottomStart="25dp"
+            app:boxCornerRadiusTopEnd="25dp"
+            app:boxCornerRadiusTopStart="25dp"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/gris"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense" >
+
+            <EditText
+                android:id="@+id/etNuevaClave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/gris"
+                android:inputType="textPassword"
+                android:lines="1"
+                android:hint="Nueva contraseña"
+                android:maxLines="1"
+                style="@style/registro" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+    <Button
+        android:id="@+id/btnGuardarCambios"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Guardar cambios"
+        android:transitionName="btnCambiarClave"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        style="@style/botonTurquesa" />
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Codi Conductor</string>
+    <plurals name="num_locations_reported">
+        <item quantity="zero">Ninguna ubicación reportada</item>
+        <item quantity="one">Se informó una ubicación</item>
+        <item quantity="other">%d ubicaciones informadas</item>
+    </plurals>
+    <string name="unknown_location">Ubicación desconocida</string>
+    <string name="location_updated">Ubicación actualizada: %1$s</string>
+    <string name="title_activity_solicitud_taxi">Map</string>
+    <string name="app_notification_description">Segundo plano activado</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+</resources>

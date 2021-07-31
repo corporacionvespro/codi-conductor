@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/turquesa</color>
+    <color name="colorPrimaryDark">@color/negro</color>
+    <color name="colorAccent">@color/gris</color>
+    <color name="turquesa">#00d6d1</color>
+    <color name="morado">#202135</color>
+    <color name="gris">#607985</color>
+    <color name="iconos">#a4b1bb</color>
+    <color name="blanco">#ffffff</color>
+    <color name="negro">#001640</color>
+    <color name="azul">#01286b</color>
+    <color name="fondo">#e5f4fc</color>
+    <color name="sombra">#6a8dc6</color>
+</resources>

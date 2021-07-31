@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/fondo" >
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <FrameLayout
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <FrameLayout
+        android:id="@+id/flayComunicado"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BF001640"
+        android:visibility="gone" >
+
+        <com.sinaseyfi.advancedcardview.AdvancedCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_gravity="center"
+            style="@style/cardSombra" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_margin="15dp" >
+
+                <TextView
+                    android:id="@+id/tvTituloComunicado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/turquesa"
+                    android:textAlignment="center"
+                    android:textSize="25sp"
+                    android:layout_marginBottom="15dp" />
+
+                <TextView
+                    android:id="@+id/tvContenidoComunicado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/negro"
+                    android:textAlignment="center"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btnAceptarComunicado"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Aceptar"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginTop="15dp"
+                    style="@style/botonAzul" />
+
+            </LinearLayout>
+
+        </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/llayCargando"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fondo_actualizar_ubicacion"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <FrameLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/splash_c"
+                android:foregroundGravity="center"
+                android:tint="@color/blanco" />
+
+            <ImageView
+                android:id="@+id/ivAnimacion1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/splash_d1"
+                android:visibility="visible"
+                android:foregroundGravity="center"
+                android:tint="@color/turquesa" />
+
+            <ImageView
+                android:id="@+id/ivAnimacion2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/splash_d2"
+                android:visibility="visible"
+                android:foregroundGravity="center"
+                android:tint="@color/turquesa" />
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actualizando\nubicación..."
+            android:textAlignment="center"
+            android:textColor="@color/blanco"
+            android:textSize="25sp"
+            android:fontFamily="@font/poppins_semibold" />
+
+    </LinearLayout>
+
+    <com.sinaseyfi.advancedcardview.AdvancedCardView
+        android:id="@+id/acvPendientes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/acvMenu"
+        android:layout_marginEnd="5dp"
+        style="@style/botonRedondo" >
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_campana"
+            android:tint="@color/blanco"
+            android:background="@drawable/redondo_azul"
+            android:padding="7.5dp"
+            android:layout_margin="5dp" />
+
+    </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+    <com.sinaseyfi.advancedcardview.AdvancedCardView
+        android:id="@+id/acvMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="75dp"
+        style="@style/botonRedondo" >
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_menu"
+            android:tint="@color/blanco"
+            android:background="@drawable/redondo_azul"
+            android:padding="7.5dp"
+            android:layout_margin="5dp" />
+
+    </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+    <com.sinaseyfi.advancedcardview.AdvancedCardView
+        android:id="@+id/acvPendientesNoche"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/acvMenuNoche"
+        android:layout_marginEnd="5dp"
+        android:visibility="gone"
+        style="@style/botonRedondoNoche" >
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_campana"
+            android:tint="@color/azul"
+            android:background="@drawable/redondo_blanco"
+            android:padding="7.5dp"
+            android:layout_margin="5dp" />
+
+    </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+    <com.sinaseyfi.advancedcardview.AdvancedCardView
+        android:id="@+id/acvMenuNoche"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="75dp"
+        android:visibility="gone"
+        style="@style/botonRedondoNoche" >
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_menu"
+            android:tint="@color/azul"
+            android:padding="7.5dp"
+            android:layout_margin="5dp" />
+
+    </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+    <Button
+        android:id="@+id/btnOcupado"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Colocarme Ocupado"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="80dp"
+        android:paddingHorizontal="20dp"
+        style="@style/botonAzul" />
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:background="@color/azul"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="70dp" />
+
+</RelativeLayout>

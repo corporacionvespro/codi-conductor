@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/fondo"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:padding="16dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginVertical="15dp" >
+
+            <TextView
+                android:id="@+id/tvNombreUsuario"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="textStart"
+                android:textColor="@color/gris"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="15sp"/>
+
+            <com.sinaseyfi.advancedcardview.AdvancedCardView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                app:cornerRadius="90dp"
+                app:shadow0_Outer_Color="@color/sombra"
+                app:shadow0_Outer_Alpha="0.5"
+                app:shadow0_Outer_Blur="10dp"
+                app:shadow_Outer_Area="10dp" >
+
+                <ImageView
+                    android:id="@+id/ivFotoUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:foregroundGravity="center"
+                    android:padding="5dp"
+                    android:background="@drawable/redondo_turquesa" />
+
+            </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="10dp" >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_moneda"
+                android:tint="@color/azul" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Saldo actual"
+                android:textColor="@color/azul"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:layout_marginStart="7dp" />
+
+            <TextView
+                android:id="@+id/tvSaldo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/boton_turquesa"
+                android:gravity="center"
+                android:textColor="@color/blanco"
+                android:fontFamily="@font/poppins_bold"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:textSize="12sp"
+                android:paddingHorizontal="10dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gris"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp" />
+
+</FrameLayout>

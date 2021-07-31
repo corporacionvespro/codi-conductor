@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    android:layout_gravity="center"
+    android:fitsSystemWindows="true" >
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Historial de servicios"
+        android:drawableEnd="@drawable/isotipo_pasajero"
+        android:layout_marginTop="50dp"
+        style="@style/titular" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="70dp"
+        android:layout_below="@id/tvTitulo" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clayHoy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <com.sinaseyfi.advancedcardview.AdvancedCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    style="@style/cardSombra" >
+
+                    <LinearLayout
+                        android:layout_width="356dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivHoy"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="5dp"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_dia"
+                            android:tint="@color/gris"
+                            android:transitionName="ivIcono" />
+
+                        <TextView
+                            android:id="@+id/tvHoy"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="15dp"
+                            android:text="Hoy"
+                            android:textColor="@color/azul"
+                            android:textSize="15sp"
+                            android:transitionName="tvTitular" />
+
+                    </LinearLayout>
+
+                </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+                <com.sinaseyfi.advancedcardview.AdvancedCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:background_Color="@color/turquesa"
+                    app:background_ColorType="solid"
+                    app:cornerRadius_BottomLeft="25dp"
+                    app:cornerRadius_TopLeft="25dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:paddingEnd="20dp"
+                        android:src="@drawable/ic_derecha"
+                        android:tint="@color/azul" />
+
+                </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/claySemana"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <com.sinaseyfi.advancedcardview.AdvancedCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    style="@style/cardSombra" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="5dp" >
+
+                        <ImageView
+                            android:id="@+id/ivSemana"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_semana"
+                            android:padding="5dp"
+                            android:layout_marginStart="5dp"
+                            android:tint="@color/gris"
+                            android:transitionName="ivIcono"  />
+
+                        <TextView
+                            android:id="@+id/tvSemana"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="Esta semana"
+                            android:textSize="15sp"
+                            android:paddingStart="15dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor="@color/azul"
+                            android:transitionName="tvTitular" />
+
+                    </LinearLayout>
+
+                </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+                <com.sinaseyfi.advancedcardview.AdvancedCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:background_Color="@color/turquesa"
+                    app:background_ColorType="solid"
+                    app:cornerRadius_BottomLeft="25dp"
+                    app:cornerRadius_TopLeft="25dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:paddingEnd="20dp"
+                        android:src="@drawable/ic_derecha"
+                        android:tint="@color/azul" />
+
+                </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clayMes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <com.sinaseyfi.advancedcardview.AdvancedCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    style="@style/cardSombra" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="5dp" >
+
+                        <ImageView
+                            android:id="@+id/ivMes"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_mes"
+                            android:padding="5dp"
+                            android:layout_marginStart="5dp"
+                            android:tint="@color/gris"
+                            android:transitionName="ivIcono"  />
+
+                        <TextView
+                            android:id="@+id/tvMes"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="Este mes"
+                            android:textSize="15sp"
+                            android:paddingStart="15dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor="@color/azul"
+                            android:transitionName="tvTitular" />
+
+                    </LinearLayout>
+
+                </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+                <com.sinaseyfi.advancedcardview.AdvancedCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:background_Color="@color/turquesa"
+                    app:background_ColorType="solid"
+                    app:cornerRadius_BottomLeft="25dp"
+                    app:cornerRadius_TopLeft="25dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:paddingEnd="20dp"
+                        android:src="@drawable/ic_derecha"
+                        android:tint="@color/azul" />
+
+                </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clayAnio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <com.sinaseyfi.advancedcardview.AdvancedCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    style="@style/cardSombra" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="5dp" >
+
+                        <ImageView
+                            android:id="@+id/ivAnio"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_anio"
+                            android:padding="5dp"
+                            android:layout_marginStart="5dp"
+                            android:tint="@color/gris"
+                            android:transitionName="ivIcono"  />
+
+                        <TextView
+                            android:id="@+id/tvAnio"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="Este año"
+                            android:textSize="15sp"
+                            android:paddingStart="15dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor="@color/azul"
+                            android:transitionName="tvTitular" />
+
+                    </LinearLayout>
+
+                </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+                <com.sinaseyfi.advancedcardview.AdvancedCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:background_Color="@color/turquesa"
+                    app:background_ColorType="solid"
+                    app:cornerRadius_BottomLeft="25dp"
+                    app:cornerRadius_TopLeft="25dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:paddingEnd="20dp"
+                        android:src="@drawable/ic_derecha"
+                        android:tint="@color/azul" />
+
+                </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clayEntreFechas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <com.sinaseyfi.advancedcardview.AdvancedCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    style="@style/cardSombra" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="5dp" >
+
+                        <ImageView
+                            android:id="@+id/ivEntreFechas"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_entre_fechas"
+                            android:padding="5dp"
+                            android:layout_marginStart="5dp"
+                            android:tint="@color/gris"
+                            android:transitionName="ivIcono"  />
+
+                        <TextView
+                            android:id="@+id/tvEntreFechas"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="Entre fechas"
+                            android:textSize="15sp"
+                            android:paddingStart="15dp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor="@color/azul"
+                            android:transitionName="tvTitular" />
+
+                    </LinearLayout>
+
+                </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+                <com.sinaseyfi.advancedcardview.AdvancedCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:background_Color="@color/turquesa"
+                    app:background_ColorType="solid"
+                    app:cornerRadius_BottomLeft="25dp"
+                    app:cornerRadius_TopLeft="25dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:paddingEnd="20dp"
+                        android:src="@drawable/ic_derecha"
+                        android:tint="@color/azul" />
+
+                </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC607985"
+        android:orientation="vertical"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/tvTitular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Entre Fechas"
+            android:textColor="@color/blanco"
+            android:textSize="18sp"
+            android:transitionName="tvTitular"
+            android:layout_marginHorizontal="70dp" />
+
+        <com.sinaseyfi.advancedcardview.AdvancedCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            style="@style/cardSombra" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_entre_fechas"
+                        android:tint="@color/turquesa"
+                        android:padding="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:weightSum="17" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Desde:"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/azul"
+                            android:layout_weight="6"/>
+
+                        <TextView
+                            android:id="@+id/tvFechaDesde"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="12/12/1991"
+                            android:textAlignment="center"
+                            android:layout_weight="10"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/azul"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/ivFechaDesde"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_desplegable_abajo"
+                            android:tint="@color/gris"
+                            android:padding="5dp"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_entre_fechas"
+                        android:tint="@color/turquesa"
+                        android:padding="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:weightSum="17" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Hasta:"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textSize="15sp"
+                            android:textColor="@color/azul"
+                            android:layout_weight="6" />
+
+                        <TextView
+                            android:id="@+id/tvFechaHasta"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="10"
+                            android:text="12/12/1992"
+                            android:textAlignment="center"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/azul"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/ivFechaHasta"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_desplegable_abajo"
+                            android:layout_weight="1"
+                            android:tint="@color/gris"
+                            android:padding="5dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+        <Button
+            android:id="@+id/btnConsultar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Consultar Historial"
+            android:layout_marginHorizontal="70dp"
+            android:layout_marginTop="30dp"
+            style="@style/botonAzul" />
+
+    </LinearLayout>
+
+</RelativeLayout>

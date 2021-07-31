@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    android:fitsSystemWindows="true" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:fitsSystemWindows="true" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Califique al pasajero"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/turquesa"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp" />
+
+            <FrameLayout
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/isotipo_pasajero" />
+
+                <ImageView
+                    android:id="@+id/ivFotoPasajero"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp"
+                    android:transitionName="ivFotoPasajero" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tvNombresPasajero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:textColor="@color/azul"
+                android:fontFamily="@font/poppins_medium"
+                android:transitionName="tvNombresPasajero"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:id="@+id/tvApellidosPasajero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:textColor="@color/azul"
+                android:fontFamily="@font/poppins_medium"
+                android:transitionName="tvApellidosPasajero"
+                android:layout_marginBottom="25dp" />
+
+            <RatingBar
+                android:id="@+id/rbOpinion"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginBottom="20dp"
+                android:numStars="5"
+                android:layout_gravity="center"
+                android:stepSize="1"
+                style="@style/ImageRatingBar" />
+
+            <TextView
+                android:id="@+id/tvTarifa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:background="@drawable/boton_turquesa"
+                android:textColor="@color/azul"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingHorizontal="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:visibility="visible" />
+
+            <com.sinaseyfi.advancedcardview.AdvancedCardView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                style="@style/cardSombra" >
+
+                <EditText
+                    android:id="@+id/etOpinion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:hint="Su opinión..."
+                    android:background="@null"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/gris"
+                    android:textColorHint="@color/gris"
+                    android:fontFamily="@font/corsa_regular"
+                    android:textSize="15sp"
+                    android:layout_gravity="top"
+                    android:inputType="text" />
+
+            </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+            <Button
+                android:id="@+id/btnAceptar"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Aceptar"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="75dp"
+                style="@style/botonAzul" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

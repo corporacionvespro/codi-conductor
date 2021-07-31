@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group
+        android:checkableBehavior="single" >
+
+        <item
+            android:id="@+id/nav_inicio"
+            android:icon="@drawable/ic_nav_mapa"
+            android:title="Mapa" />
+
+        <item
+            android:id="@+id/nav_perfil"
+            android:icon="@drawable/ic_nav_perfil"
+            android:title="Mi Perfil" />
+
+        <item
+            android:id="@+id/nav_lugares"
+            android:icon="@drawable/ic_nav_lugares_recomendados"
+            android:title="Lugares Recomendados" />
+
+        <item
+            android:id="@+id/nav_historial"
+            android:icon="@drawable/ic_nav_historial_de_servicios"
+            android:title="Historial de Servicios" />
+
+        <item
+            android:id="@+id/nav_promociones"
+            android:icon="@drawable/ic_nav_promociones"
+            android:title="Promociones" />
+
+        <item
+            android:id="@+id/nav_acerca_app"
+            android:icon="@drawable/ic_nav_acerca"
+            android:title="Acerca de Codi App" />
+
+        <item
+            android:id="@+id/nav_ocupado"
+            android:icon="@drawable/ic_nav_ocupado"
+            android:title="Ocupado"
+            android:visible="false" />
+
+        <item android:id="@+id/nav_noche"
+            android:title="Mapa oscuro"
+            android:icon="@drawable/ic_noche"
+            app:actionLayout="@layout/switch_menu" />
+
+        <item
+            android:id="@+id/nav_compartir"
+            android:icon="@drawable/ic_nav_compartir"
+            android:title="Compartir App" />
+
+        <item
+            android:id="@+id/nav_cerrar"
+            android:icon="@drawable/ic_nav_cerrar"
+            android:title="Cerrar sesión" />
+
+    </group>
+
+</menu>

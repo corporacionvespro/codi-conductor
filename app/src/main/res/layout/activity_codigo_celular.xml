@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    android:orientation="vertical"
+    tools:context=".CodigoCelularActivity" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ingrese el código de verificación de 6 dígitos enviado a su celular"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/azul"
+        android:scrollbarSize="15sp"
+        android:textAlignment="center"
+        android:layout_margin="30dp"/>
+
+    <EditText
+        android:id="@+id/etCodigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/azul"
+        android:hint="000000"
+        android:textColorHint="@color/gris"
+        android:backgroundTint="@color/gris"
+        android:paddingHorizontal="15dp" />
+
+</LinearLayout>

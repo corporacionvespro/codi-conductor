@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fondo"
+        android:orientation="vertical"
+        android:gravity="bottom|center" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="145dp"
+                android:layout_height="145dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/logoGoo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/splash_c"
+                    android:foregroundGravity="center"
+                    android:tint="@color/azul" />
+
+                <ImageView
+                    android:id="@+id/ivAnimacion1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/splash_d1"
+                    android:visibility="visible"
+                    android:foregroundGravity="center"
+                    android:alpha="0.2"
+                    android:tint="@color/turquesa" />
+
+                <ImageView
+                    android:id="@+id/ivAnimacion2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/splash_d2"
+                    android:visibility="visible"
+                    android:foregroundGravity="center"
+                    android:alpha="1.0"
+                    android:tint="@color/turquesa" />
+
+            </FrameLayout>
+
+            <ImageView
+                android:layout_width="145dp"
+                android:layout_height="100dp"
+                android:src="@drawable/logotipo"
+                android:layout_marginTop="14dp"
+                android:tint="@color/azul"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="25dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:src="@drawable/ciudad"
+                android:scaleType="fitXY" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/flayUpdates"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BF607985"
+        android:visibility="gone" >
+
+        <com.sinaseyfi.advancedcardview.AdvancedCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="50dp"
+            style="@style/cardSombra" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="15dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tenemos una nueva versión disponible para ti, descárgala en PlayStore"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/negro"
+                    android:scrollbarSize="25sp"
+                    android:textAlignment="center" />
+
+                <Button
+                    android:id="@+id/btnAceptar"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Aceptar"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginTop="15dp"
+                    style="@style/botonTurquesa" />
+
+            </LinearLayout>
+
+        </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flayPermisos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BF607985"
+        android:visibility="visible" >
+
+        <com.sinaseyfi.advancedcardview.AdvancedCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="50dp"
+            style="@style/cardSombra" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="15dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Esta aplicación recopila datos de ubicación para habilitar la recepción de solicitudes de taxi,  incluso cuando la aplicación está cerrada o no está en uso."
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/negro"
+                    android:scrollbarSize="25sp"
+                    android:textAlignment="center" />
+
+                <Button
+                    android:id="@+id/btnAceptarPermisos"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Aceptar"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginTop="15dp"
+                    style="@style/botonTurquesa" />
+
+            </LinearLayout>
+
+        </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+    </FrameLayout>
+
+</RelativeLayout>

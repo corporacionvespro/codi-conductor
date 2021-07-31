@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.sinaseyfi.advancedcardview.AdvancedCardView
+        android:id="@+id/acvTitular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="30dp"
+        app:background_ColorType="solid"
+        app:background_Color="@color/turquesa"
+        app:cornerRadius="25dp" >
+
+        <TextView
+            android:id="@+id/tvTitular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Servicios disponibles"
+            android:drawableEnd="@drawable/isotipo_conductor"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/blanco"
+            android:textSize="18sp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="10dp" />
+
+    </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPendientes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/acvTitular"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="75dp" />
+
+    <FrameLayout
+        android:id="@+id/flayUpdates"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BF607985"
+        android:visibility="gone" >
+
+        <com.sinaseyfi.advancedcardview.AdvancedCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="50dp"
+            style="@style/cardSombra" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="15dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tenemos una nueva versión disponible para ti, descárgala en PlayStore"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/negro"
+                    android:scrollbarSize="25sp"
+                    android:textAlignment="center" />
+
+                <Button
+                    android:id="@+id/btnAceptar"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Aceptar"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginTop="15dp"
+                    style="@style/botonTurquesa" />
+
+            </LinearLayout>
+
+        </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+    </FrameLayout>
+
+</RelativeLayout>

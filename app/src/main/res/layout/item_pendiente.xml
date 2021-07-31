@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sinaseyfi.advancedcardview.AdvancedCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/cardSombra" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="15dp" >
+
+        <ImageView
+            android:id="@+id/ivFotoPasajero"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:transitionName="ivFotoPasajero" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="15dp" >
+
+            <TextView
+                android:id="@+id/tvFechaHora"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:textColor="@color/gris"
+                android:fontFamily="@font/poppins_light"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/tvNombresPasajero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/azul"
+                android:textSize="15sp"
+                android:transitionName="tvNombresPasajero"/>
+
+            <TextView
+                android:id="@+id/tvDireccionOrigen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
+                android:textColor="@color/azul"
+                android:textSize="13.5sp"
+                android:transitionName="tvApellidosPasajero" />
+
+            <Button
+                android:id="@+id/btnVer"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Ver"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="15dp"
+                style="@style/botonAzul" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.sinaseyfi.advancedcardview.AdvancedCardView>

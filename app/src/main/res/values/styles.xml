@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/fondo</item>
+        <item name="colorAccent">@color/gris</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="cardSombra" parent="AppTheme">
+        <item name="background_ColorType">solid</item>
+        <item name="background_Color">@color/blanco</item>
+        <item name="cornerRadius">25dp</item>
+        <item name="shadow0_Outer_Blur">8dp</item>
+        <item name="shadow0_Outer_Alpha">0.5</item>
+        <item name="shadow_Outer_Area">10dp</item>
+        <item name="shadow0_Outer_Color">@color/sombra</item>
+    </style>
+
+    <style name="botonTurquesa" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/boton_turquesa</item>
+        <item name="android:textColor">@color/blanco</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="botonAzul" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/boton_azul</item>
+        <item name="android:textColor">@color/blanco</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="botonBlanco" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/boton_blanco</item>
+        <item name="android:textColor">@color/azul</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="botonRedondo" >
+        <item name="background_ColorType">solid</item>
+        <item name="background_Type">fill_stroke</item>
+        <item name="cornerRadius">50dp</item>
+        <item name="stroke_Color">@color/azul</item>
+        <item name="background_Color">#e1e5f9</item>
+        <item name="stroke_ColorType">solid</item>
+        <item name="stroke_Width">1.5dp</item>
+        <item name="shadow0_Outer_Color">@color/sombra</item>
+        <item name="shadow_Outer_Area">5dp</item>
+        <item name="shadow0_Outer_Alpha">0.75</item>
+        <item name="shadow0_Outer_Blur">5dp</item>
+    </style>
+
+    <style name="botonRedondoNoche" >
+        <item name="background_ColorType">solid</item>
+        <item name="background_Type">fill</item>
+        <item name="cornerRadius">50dp</item>
+        <item name="background_Color">@color/blanco</item>
+        <item name="shadow0_Outer_Color">@color/sombra</item>
+        <item name="shadow_Outer_Area">5dp</item>
+        <item name="shadow0_Outer_Alpha">0.75</item>
+        <item name="shadow0_Outer_Blur">5dp</item>
+    </style>
+
+    <style name="ImageRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratingbar_selector</item>
+    </style>
+
+    <style name="Material" parent="@style/Theme.MaterialComponents.DayNight.NoActionBar" >
+        <item name="colorPrimary">#E2ECF2</item>
+        <item name="colorPrimaryDark">#E2ECF2</item>
+        <item name="colorAccent">#E2ECF2</item>
+    </style>
+
+    <style name="menu" parent="AppTheme" >
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="listPreferredItemPaddingLeft">0dp</item>
+        <item name="listPreferredItemPaddingRight">0dp</item>
+    </style>
+
+    <style name="registro" parent="Widget.AppCompat.EditText" >
+        <item name="android:background">@null</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:lines">1</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColorHint">@color/gris</item>
+        <item name="android:textColor">@color/gris</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:paddingVertical">10dp</item>
+        <item name="android:paddingHorizontal">20dp</item>
+    </style>
+
+    <style name="swith" parent="Theme.AppCompat.Light" >
+        <item name="colorControlActivated">@color/turquesa</item>
+        <item name="colorSwitchThumbNormal">@color/blanco</item>
+        <item name="android:colorForeground">@color/gris</item>
+    </style>
+
+    <style name="titular" parent="Widget.AppCompat.TextView" >
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/iconos</item>
+        <item name="android:layout_marginEnd">30dp</item>
+        <item name="android:layout_marginStart">55dp</item>
+    </style>
+
+    <style name="Theme.Transparent" parent="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+</resources>

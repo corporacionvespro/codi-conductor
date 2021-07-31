@@ -1,0 +1,53 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <com.sinaseyfi.advancedcardview.AdvancedCardView
+        android:id="@+id/acvAcercaApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/cardSombra" >
+
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="8dp"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center_vertical"
+            android:textColor="@color/azul"
+            android:textSize="15sp"
+            android:transitionName="tvTitulo" />
+
+    </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+    <com.sinaseyfi.advancedcardview.AdvancedCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:background_Color="@color/turquesa"
+        app:background_ColorType="solid"
+        app:cornerRadius_BottomLeft="25dp"
+        app:cornerRadius_TopLeft="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:paddingEnd="20dp"
+            android:src="@drawable/ic_derecha"
+            android:tint="@color/blanco" />
+
+    </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true" >
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SolicitudTaxiActivity" />
+
+    <com.sinaseyfi.advancedcardview.AdvancedCardView
+        android:id="@+id/acvDatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:background_Color="@color/blanco"
+        style="@style/cardSombra" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="50dp">
+
+            <ImageView
+                android:id="@+id/ivFotoPasajero"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:transitionName="ivFotoPasajero" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="15dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:id="@+id/tvNombresPasajero"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/azul"
+                            android:textSize="15sp"
+                            android:transitionName="tvNombresPasajero"
+                            android:singleLine="true" />
+
+                        <TextView
+                            android:id="@+id/tvApellidosPasajero"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/azul"
+                            android:textSize="15sp"
+                            android:transitionName="tvApellidosPasajero"
+                            android:visibility="gone"
+                            android:singleLine="true"  />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivLlamada"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/redondo_turquesa"
+                        android:src="@drawable/ic_llamada"
+                        android:tint="@color/blanco"
+                        android:padding="5dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:id="@+id/tvDireccionOrigen"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/azul"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:layout_marginTop="15dp" />
+
+                        <TextView
+                            android:id="@+id/tvReferencia"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gris"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_marginTop="15dp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tvDireccionDestino"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/azul"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:layout_marginTop="15dp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llayTiempoPrecio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginHorizontal="5dp"
+                        android:visibility="gone" >
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tvTiempo"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="@drawable/boton_turquesa"-->
+<!--                            android:textColor="@color/blanco"-->
+<!--                            android:fontFamily="@font/poppins_bold"-->
+<!--                            android:textSize="12sp"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:paddingHorizontal="15dp"-->
+<!--                            android:layout_marginVertical="2.5dp" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tvPrecio"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="@drawable/boton_turquesa"-->
+<!--                            android:textColor="@color/blanco"-->
+<!--                            android:fontFamily="@font/poppins_bold"-->
+<!--                            android:textSize="12sp"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:paddingHorizontal="15dp"-->
+<!--                            android:layout_marginVertical="2.5dp" />-->
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTiempo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/boton_turquesa"
+            android:textColor="@color/blanco"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="12sp"
+            android:visibility="gone"
+            android:paddingHorizontal="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="bottom|start" />
+
+        <ImageView
+            android:id="@+id/ivOcultar"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_desplegable_abajo"
+            android:tint="@color/azul"
+            android:layout_gravity="center|bottom"
+            android:rotation="180"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/tvPrecio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/boton_turquesa"
+            android:textColor="@color/blanco"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="12sp"
+            android:visibility="gone"
+            android:paddingHorizontal="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="bottom|end" />
+
+    </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+    <ImageView
+        android:id="@+id/ivMostrar"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_desplegable_abajo"
+        android:tint="@color/azul"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/redondo_blanco"
+        android:layout_marginTop="50dp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnAceptar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Aceptar servicio"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="75dp"
+        android:layout_marginHorizontal="50dp"
+        android:visibility="gone"
+        style="@style/botonAzul" />
+
+    <Button
+        android:id="@+id/btnFinalizar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Finalizar viaje"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="75dp"
+        android:layout_marginHorizontal="50dp"
+        android:visibility="gone"
+        style="@style/botonAzul" />
+
+    <LinearLayout
+        android:id="@+id/llayBotones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="75dp"
+        android:layout_marginHorizontal="15dp"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/btnNotificar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Notificar llegada"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="10dp"
+            style="@style/botonAzul" />
+
+        <Button
+            android:id="@+id/btnAbordo"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="A Bordo"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="10dp"
+            style="@style/botonAzul" />
+
+    </LinearLayout>
+
+    <com.sinaseyfi.advancedcardview.AdvancedCardView
+        android:id="@+id/acvCancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/acvDatos"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="50dp"
+        android:visibility="gone"
+        style="@style/botonRedondo" >
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_equis"
+            android:tint="@color/blanco"
+            android:background="@drawable/redondo_azul"
+            android:padding="5dp"
+            android:layout_margin="5dp" />
+
+    </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+    <com.sinaseyfi.advancedcardview.AdvancedCardView
+        android:id="@+id/acvCancelarNoche"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/acvDatos"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="50dp"
+        android:visibility="gone"
+        style="@style/botonRedondoNoche" >
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_equis"
+            android:tint="@color/azul"
+            android:padding="7.5dp"
+            android:layout_margin="5dp" />
+
+    </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+    <com.sinaseyfi.advancedcardview.AdvancedCardView
+        android:id="@+id/acvAuto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/acvDatos"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="50dp"
+        android:visibility="gone"
+        style="@style/botonRedondo" >
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@mipmap/carro"
+            android:background="@drawable/redondo_azul"
+            android:padding="5dp"
+            android:layout_margin="5dp" />
+
+    </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+    <com.sinaseyfi.advancedcardview.AdvancedCardView
+        android:id="@+id/acvBandera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/acvDatos"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="50dp"
+        android:visibility="gone"
+        style="@style/botonRedondo" >
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@mipmap/ic_bandera"
+            android:tint="@color/blanco"
+            android:background="@drawable/redondo_azul"
+            android:padding="5dp"
+            android:layout_margin="5dp" />
+
+    </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+    <com.sinaseyfi.advancedcardview.AdvancedCardView
+        android:id="@+id/acvAutoNoche"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/acvDatos"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="50dp"
+        android:visibility="gone"
+        style="@style/botonRedondoNoche" >
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_auto"
+            android:padding="5dp"
+            android:layout_margin="5dp" />
+
+    </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+    <com.sinaseyfi.advancedcardview.AdvancedCardView
+        android:id="@+id/acvBanderaNoche"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/acvDatos"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="50dp"
+        android:visibility="gone"
+        style="@style/botonRedondoNoche" >
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@mipmap/ic_bandera"
+            android:tint="@color/azul"
+            android:padding="5dp"
+            android:layout_margin="5dp" />
+
+    </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+    <FrameLayout
+        android:id="@+id/flayCancelar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#5000d6d1"
+        android:elevation="100dp"
+        android:visibility="gone" >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            app:cardBackgroundColor="@color/blanco"
+            app:cardCornerRadius="25dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="¿Está seguro que desea cancelar el servicio?"
+                    android:textColor="@color/azul"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="20sp"
+                    android:textAlignment="center" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/btnSi"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:layout_margin="15dp"
+                        android:text="Sí"
+                        style="@style/botonTurquesa" />
+
+                    <Button
+                        android:id="@+id/btnNo"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:layout_margin="15dp"
+                        android:text="No"
+                        style="@style/botonTurquesa" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flayGratis"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BF01286B"
+        android:elevation="100dp"
+        android:visibility="gone" >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            app:cardBackgroundColor="@color/blanco"
+            app:cardCornerRadius="25dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Promoción"
+                    android:textColor="@color/turquesa"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textSize="25sp"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/tvDescuento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="El pasajero tiene un descuento especial de S/"
+                    android:textColor="@color/azul"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="15dp" />
+
+                <Button
+                    android:id="@+id/btnAceptarGratis"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Seguir"
+                    android:layout_marginTop="15dp"
+                    style="@style/botonAzul" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+</RelativeLayout>

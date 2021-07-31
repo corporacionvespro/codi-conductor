@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="70dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Acerca de Codi"
+            android:drawableEnd="@drawable/isotipo_pasajero"
+            style="@style/titular" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAcercaApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="30dp" />
+
+    </LinearLayout>
+
+    <com.sinaseyfi.advancedcardview.AdvancedCardView
+        android:id="@+id/acvMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="75dp"
+        android:layout_marginEnd="5dp"
+        style="@style/botonRedondo" >
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_menu"
+            android:tint="@color/blanco"
+            android:background="@drawable/redondo_azul"
+            android:padding="7.5dp"
+            android:layout_margin="5dp" />
+
+    </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+    <FrameLayout
+        android:id="@+id/flayAcercaApp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80607985"
+        android:visibility="gone" />
+
+</RelativeLayout>

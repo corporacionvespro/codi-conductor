@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo" >
+
+    <TextView
+        android:id="@+id/tvTitular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lugares recomendados"
+        android:drawableEnd="@drawable/isotipo_pasajero"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        style="@style/titular" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCategoria"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tvTitular"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="75dp"
+        android:layout_marginStart="25dp" />
+
+    <com.sinaseyfi.advancedcardview.AdvancedCardView
+        android:id="@+id/acvMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="75dp"
+        android:layout_marginEnd="5dp"
+        style="@style/botonRedondo" >
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_menu"
+            android:tint="@color/blanco"
+            android:background="@drawable/redondo_azul"
+            android:padding="7.5dp"
+            android:layout_margin="5dp" />
+
+    </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+</RelativeLayout>

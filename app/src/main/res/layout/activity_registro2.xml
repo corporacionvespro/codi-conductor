@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    android:fitsSystemWindows="true"
+    android:theme="@style/Material" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:padding="10dp"
+                android:weightSum="1"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="50dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ingresa "
+                        android:textColor="@color/azul"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/corsa_regular"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="la información de la unidad"
+                        android:textColor="@color/azul"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/corsa_thin"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="50dp"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:height="30dp"
+                    android:background="@drawable/boton_turquesa" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <com.sinaseyfi.advancedcardview.AdvancedCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        style="@style/cardSombra" >
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/gris"
+                            app:hintEnabled="false"
+                            app:hintTextColor="@color/gris"
+                            app:boxStrokeWidth="0dp"
+                            app:boxCornerRadiusBottomEnd="25dp"
+                            app:boxCornerRadiusBottomStart="25dp"
+                            app:boxCornerRadiusTopEnd="25dp"
+                            app:boxCornerRadiusTopStart="25dp"
+                            app:hintTextAppearance="@color/gris"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense" >
+
+                            <EditText
+                                android:id="@+id/etMarca"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Marca"
+                                android:inputType="text"
+                                android:imeOptions="actionNext"
+                                style="@style/registro" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+                    <com.sinaseyfi.advancedcardview.AdvancedCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/cardSombra" >
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/gris"
+                            app:hintEnabled="false"
+                            app:hintTextColor="@color/gris"
+                            app:boxStrokeWidth="0dp"
+                            app:boxCornerRadiusBottomEnd="25dp"
+                            app:boxCornerRadiusBottomStart="25dp"
+                            app:boxCornerRadiusTopEnd="25dp"
+                            app:boxCornerRadiusTopStart="25dp"
+                            app:hintTextAppearance="@color/gris"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense" >
+
+                            <EditText
+                                android:id="@+id/etModelo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Modelo"
+                                android:inputType="text"
+                                android:imeOptions="actionNext"
+                                style="@style/registro" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+                    <com.sinaseyfi.advancedcardview.AdvancedCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/cardSombra" >
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/gris"
+                            app:hintEnabled="false"
+                            app:hintTextColor="@color/gris"
+                            app:boxStrokeWidth="0dp"
+                            app:boxCornerRadiusBottomEnd="25dp"
+                            app:boxCornerRadiusBottomStart="25dp"
+                            app:boxCornerRadiusTopEnd="25dp"
+                            app:boxCornerRadiusTopStart="25dp"
+                            app:hintTextAppearance="@color/gris"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense" >
+
+                            <EditText
+                                android:id="@+id/etPlaca"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Placa"
+                                android:inputType="textCapCharacters"
+                                android:imeOptions="actionNext"
+                                style="@style/registro" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+                    <com.sinaseyfi.advancedcardview.AdvancedCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/cardSombra" >
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/gris"
+                            app:hintEnabled="false"
+                            app:hintTextColor="@color/gris"
+                            app:boxStrokeWidth="0dp"
+                            app:boxCornerRadiusBottomEnd="25dp"
+                            app:boxCornerRadiusBottomStart="25dp"
+                            app:boxCornerRadiusTopEnd="25dp"
+                            app:boxCornerRadiusTopStart="25dp"
+                            app:hintTextAppearance="@color/gris"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense" >
+
+                            <EditText
+                                android:id="@+id/etColor"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Color"
+                                android:inputType="text"
+                                android:imeOptions="actionNext"
+                                style="@style/registro" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+                    <com.sinaseyfi.advancedcardview.AdvancedCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/cardSombra" >
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/gris"
+                            app:hintEnabled="false"
+                            app:hintTextColor="@color/gris"
+                            app:boxStrokeWidth="0dp"
+                            app:boxCornerRadiusBottomEnd="25dp"
+                            app:boxCornerRadiusBottomStart="25dp"
+                            app:boxCornerRadiusTopEnd="25dp"
+                            app:boxCornerRadiusTopStart="25dp"
+                            app:hintTextAppearance="@color/gris"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense" >
+
+                            <EditText
+                                android:id="@+id/etAnio"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Año"
+                                android:inputType="phone"
+                                android:imeOptions="actionNext"
+                                style="@style/registro" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+                    <com.sinaseyfi.advancedcardview.AdvancedCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        style="@style/cardSombra" >
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/gris"
+                            app:hintEnabled="false"
+                            app:hintTextColor="@color/gris"
+                            app:boxStrokeWidth="0dp"
+                            app:boxCornerRadiusBottomEnd="25dp"
+                            app:boxCornerRadiusBottomStart="25dp"
+                            app:boxCornerRadiusTopEnd="25dp"
+                            app:boxCornerRadiusTopStart="25dp"
+                            app:hintTextAppearance="@color/gris"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense" >
+
+                            <EditText
+                                android:id="@+id/etEmpresa"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Empresa"
+                                android:inputType="text"
+                                android:imeOptions="actionNext"
+                                style="@style/registro" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+                    <com.sinaseyfi.advancedcardview.AdvancedCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/cardSombra" >
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/gris"
+                            app:hintEnabled="false"
+                            app:hintTextColor="@color/gris"
+                            app:boxStrokeWidth="0dp"
+                            app:boxCornerRadiusBottomEnd="25dp"
+                            app:boxCornerRadiusBottomStart="25dp"
+                            app:boxCornerRadiusTopEnd="25dp"
+                            app:boxCornerRadiusTopStart="25dp"
+                            app:hintTextAppearance="@color/gris"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense" >
+
+                            <EditText
+                                android:id="@+id/etCiudad"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Ciudad"
+                                android:inputType="textCapSentences"
+                                android:imeOptions="actionNext"
+                                style="@style/registro" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginHorizontal="15dp" >
+
+                    <CheckBox
+                        android:id="@+id/chkPoliticas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Acepto los "
+                        android:textColor="@color/azul"
+                        android:layout_marginTop="5dp"
+                        android:buttonTint="@color/gris"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvCondiciones"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="términos y condiciones"
+                        android:textColor="@color/azul"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnFinalizarRegistro"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Finalizar Registro"
+                    android:visibility="gone"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="75dp"
+                    android:layout_marginHorizontal="70dp"
+                    style="@style/botonAzul" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/flayPoliticas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B301286B"
+        android:visibility="gone" >
+
+        <com.sinaseyfi.advancedcardview.AdvancedCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            style="@style/cardSombra" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textAlignment="center"
+                    android:textColor="@color/azul"
+                    android:textSize="18sp"
+                    android:text="Términos y condiciones"
+                    android:layout_margin="15dp"
+                    android:transitionName="tvTitulo" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvContenido"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textColor="@color/azul"
+                            android:textSize="15sp"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginVertical="15dp" />
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+                <Button
+                    android:id="@+id/btnAceptar"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Aceptar"
+                    android:layout_marginVertical="15dp"
+                    android:layout_marginHorizontal="50dp"
+                    style="@style/botonAzul" />
+
+            </LinearLayout>
+
+        </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flayCargando"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BF01286B"
+        android:layout_centerInParent="true"
+        android:visibility="gone" >
+
+        <com.github.jlmd.animatedcircleloadingview.AnimatedCircleLoadingView
+            android:id="@+id/circle_loading_view"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"
+            app:mainColor="@color/turquesa"
+            app:secondaryColor="@color/blanco"
+            app:textColor="@color/blanco" />
+
+    </FrameLayout>
+
+</RelativeLayout>

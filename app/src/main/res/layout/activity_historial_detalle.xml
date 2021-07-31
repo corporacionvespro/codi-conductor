@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <com.sinaseyfi.advancedcardview.AdvancedCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:background_ColorType="solid"
+                app:background_Color="@color/blanco"
+                app:cornerRadius="150dp"
+                app:shadow0_Outer_Blur="8dp"
+                app:shadow0_Outer_Alpha="0.5"
+                app:shadow_Outer_Area="10dp"
+                app:shadow0_Outer_Color="@color/sombra" >
+
+                <ImageView
+                    android:id="@+id/ivFotoPasajero"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:transitionName="ivFotoConductor" />
+
+            </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+            <TextView
+                android:id="@+id/tvNombresPasajero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="25sp"
+                android:textColor="@color/azul"
+                android:fontFamily="@font/poppins_medium"
+                android:textAlignment="center"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="15dp"
+                android:transitionName="tvNombresConductor" />
+
+            <TextView
+                android:id="@+id/tvApellidosPasajero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="25sp"
+                android:textColor="@color/azul"
+                android:fontFamily="@font/poppins_medium"
+                android:textAlignment="center"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginBottom="15dp"
+                android:transitionName="tvApellidosConductor" />
+
+            <RatingBar
+                android:id="@+id/rbValoracion"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:stepSize="1"
+                android:numStars="5"
+                android:rating="3"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
+                android:isIndicator="true"
+                android:transitionName="rbValoracion"
+                style="@style/ImageRatingBar" />
+
+            <com.sinaseyfi.advancedcardview.AdvancedCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:layout_marginHorizontal="15dp"
+                style="@style/cardSombra" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="15dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginVertical="5dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="De: "
+                            android:textColor="@color/azul"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tvDireccionOrigen"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/azul"
+                            android:fontFamily="@font/corsa_regular"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginVertical="5dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="A: "
+                            android:textColor="@color/azul"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tvDireccionDestino"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/azul"
+                            android:fontFamily="@font/corsa_regular"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginVertical="5dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fecha: "
+                            android:textColor="@color/azul"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tvFechaHora"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/azul"
+                            android:fontFamily="@font/corsa_regular"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+            <TextView
+                android:id="@+id/tvPagoFinal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/blanco"
+                android:fontFamily="@font/poppins_bold"
+                android:transitionName="tvPagoFinal"
+                android:text="S/ 5.00"
+                android:background="@drawable/boton_turquesa"
+                android:layout_marginStart="25dp"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="2.5dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

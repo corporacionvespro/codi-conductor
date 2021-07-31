@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+
+        <FrameLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/logoGoo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/isotipo_pasajero" />
+
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/btnDisponible"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Colocarme disponible"
+            android:layout_marginTop="100dp"
+            android:paddingStart="25dp"
+            android:paddingEnd="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/logoGoo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/botonAzul" />
+
+    </LinearLayout>
+
+    <com.sinaseyfi.advancedcardview.AdvancedCardView
+        android:id="@+id/acvMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="75dp"
+        android:layout_marginEnd="5dp"
+        style="@style/botonRedondo" >
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_menu"
+            android:tint="@color/blanco"
+            android:background="@drawable/redondo_azul"
+            android:padding="7.5dp"
+            android:layout_margin="5dp" />
+
+    </com.sinaseyfi.advancedcardview.AdvancedCardView>
+
+</RelativeLayout>
